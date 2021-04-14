@@ -1,3 +1,5 @@
+package me.khosraw; 
+
 import java.util.Scanner;  // Import the Scanner class
 
 // main class
