@@ -58,7 +58,7 @@ public class Main {
   public static void main(String[] args) {
 
     menu.options();
-
+/*
     Main calc = new Main();
 
     Scanner objOperator = new Scanner(System.in);  // Create a Scanner object
@@ -201,6 +201,8 @@ public class Main {
       System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
 
     }
+
+ */
 
   }
 }

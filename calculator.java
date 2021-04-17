@@ -1,8 +1,6 @@
-package me.khosraw; 
+import java.util.Scanner;
 
-import java.util.Scanner; 
-
-public class Clac {
+public class calculator {
   // instances
   double addedNum;
   double subtractedNum;
