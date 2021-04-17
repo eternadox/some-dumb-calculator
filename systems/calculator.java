@@ -1,3 +1,5 @@
+package systems;
+
 import java.util.Scanner;
 
 public class calculator {

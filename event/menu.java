@@ -1,3 +1,7 @@
+package event;
+
+import systems.calculator;
+
 import java.util.Scanner;
 
 public class menu {
