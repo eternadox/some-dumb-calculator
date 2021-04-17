@@ -35,7 +35,7 @@ public class menu {
 
         }
 
-        System.out.println(calculator.addedNum);
+
 
       } else if (opInt == 2) {
         System.out.print("Enter your first number: ");
@@ -56,7 +56,7 @@ public class menu {
 
         }
 
-        System.out.println(calculator.subtractedNum);
+
 
       } else if (opInt == 3) {
         System.out.print("Enter your first number: ");
@@ -77,7 +77,7 @@ public class menu {
 
         }
 
-        System.out.println(calculator.multipliedNum);
+
 
       } else if (opInt == 4) {
         System.out.print("Enter your first number: ");
@@ -99,10 +99,8 @@ public class menu {
 
           if (whichInt == 1) {
             calculator.Rem(num1Double, num2Double);
-            System.out.println(calculator.Add(num1Double, num2Double));
           } else {
             calculator.Div(num1Double, num2Double);
-            System.out.println(calculator.dividedNum);
           }
 
         } catch (NumberFormatException nfe) {
@@ -120,8 +118,6 @@ public class menu {
         } catch (NumberFormatException nfe) {
           System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a   number?");
         }
-
-        System.out.println(calculator.powedNum);
 
       } else {
         System.out.println("Invalid Input!");
