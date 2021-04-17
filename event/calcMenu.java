@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class calcMenu {
 
-  public static void options() {
+  public static void Main () {
 
     Scanner objOperator = new Scanner(System.in);  // Create a Scanner object
     System.out.println("Which operation would you like to do?\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Power");
