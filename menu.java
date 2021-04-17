@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class menu {
 
   public static void options() {
-    Main calc = new Main();
 
     Scanner objOperator = new Scanner(System.in);  // Create a Scanner object
     System.out.println("Which operation would you like to do?\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Power");
@@ -29,14 +28,14 @@ public class menu {
           String num2 = objNum2.nextLine();
           double num2Double = Double.parseDouble(num2);
 
-          calc.Add(num1Double, num2Double);
+          calculator.Add(num1Double, num2Double);
 
         } catch (NumberFormatException nfe) {
           System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a   number?");
 
         }
 
-        System.out.println(calc.addedNum);
+        System.out.println(calculator.addedNum);
 
       } else if (opInt == 2) {
         System.out.print("Enter your first number: ");
@@ -50,14 +49,14 @@ public class menu {
           String num2 = objNum2.nextLine();
           double num2Double = Double.parseDouble(num2);
 
-          calc.Sub(num1Double, num2Double);
+          calculator.Sub(num1Double, num2Double);
 
         } catch (NumberFormatException nfe) {
           System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a   number?");
 
         }
 
-        System.out.println(calc.subtractedNum);
+        System.out.println(calculator.subtractedNum);
 
       } else if (opInt == 3) {
         System.out.print("Enter your first number: ");
@@ -71,14 +70,14 @@ public class menu {
           String num2 = objNum2.nextLine();
           double num2Double = Double.parseDouble(num2);
 
-          calc.Multi(num1Double, num2Double);
+          calculator.Multi(num1Double, num2Double);
 
         } catch (NumberFormatException nfe) {
           System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a   number?");
 
         }
 
-        System.out.println(calc.multipliedNum);
+        System.out.println(calculator.multipliedNum);
 
       } else if (opInt == 4) {
         System.out.print("Enter your first number: ");
@@ -99,11 +98,11 @@ public class menu {
           int whichInt = Integer.parseInt(which);
 
           if (whichInt == 1) {
-            calc.Rem(num1Double, num2Double);
-            System.out.println(calc.remainderedNum);
+            calculator.Rem(num1Double, num2Double);
+            System.out.println(calculator.Add(num1Double, num2Double));
           } else {
-            calc.Div(num1Double, num2Double);
-            System.out.println(calc.dividedNum);
+            calculator.Div(num1Double, num2Double);
+            System.out.println(calculator.dividedNum);
           }
 
         } catch (NumberFormatException nfe) {
@@ -117,12 +116,12 @@ public class menu {
         try {
           String num1 = objNum1.nextLine();
           double num1Double = Double.parseDouble(num1);
-          calc.Pow(num1Double);
+          calculator.Pow(num1Double);
         } catch (NumberFormatException nfe) {
           System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a   number?");
         }
 
-        System.out.println(calc.powedNum);
+        System.out.println(calculator.powedNum);
 
       } else {
         System.out.println("Invalid Input!");

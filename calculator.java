@@ -1,20 +1,20 @@
-import java.util.Scanner;
-
 public class calculator {
   // instances
-  double addedNum;
+ /* double addedNum;
   double subtractedNum;
   double multipliedNum;
   double dividedNum;
   double remainderedNum;
   double powedNum;
-
+*/
 
 // addition method
-  public void Add(double num1, double num2) {
+  public static boolean Add(double num1, double num2) {
 
-    addedNum = num1 + num2;
+    double addedNum = num1 + num2;
+    System.out.println(addedNum);
 
+    return false;
   }
 
 // subtraction method
@@ -31,7 +31,7 @@ public class calculator {
 
   }
   
-// divison method
+// division method
   public void Div(double num1, double num2) {
 
     dividedNum = num1 / num2;
