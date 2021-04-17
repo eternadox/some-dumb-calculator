@@ -1,10 +1,10 @@
-import event.menu;
+import event.calcMenu;
 
 public class Main {
 
   public static void main(String[] args) {
 
-    menu.options();
+    calcMenu.options();
 
   }
 }
