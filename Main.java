@@ -1,5 +1,6 @@
 import event.calcMenu;
 import java.util.Scanner;
+import systems.salary;
 
 public class Main {
 
@@ -15,7 +16,7 @@ public class Main {
       calcMenu.Main();
 
     } else if (option == 2) {
-      Salary.calculate();
+      salary.calculate();
 
     }
 
