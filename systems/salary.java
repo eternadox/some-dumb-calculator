@@ -48,6 +48,13 @@ public class salary {
 
         double salary = yearlySalary(hoursPerDay, incomePerHour, vacationDays);
 
+        // currency type declaration
+        NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
+        NumberFormat in = NumberFormat.getCurrencyInstance(new Locale("en", "in"));
+        NumberFormat cn = NumberFormat.getCurrencyInstance(Locale.CHINA);
+        NumberFormat fr = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        NumberFormat jn = NumberFormat.getCurrencyInstance(Locale.JAPAN);
+
         System.out.println("Which type of currency would you like?\n\n" +
                 "1. USD\n" +
                 "2. Rupee\n" +
@@ -56,22 +63,13 @@ public class salary {
                 "5. Yen\n");
 
         int currencyOption = input.nextInt();
-        if (currencyOption == 1) {
-            NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
-            System.out.println("Your salary is: " + (us.format(salary)));
-
-        } else if (currencyOption == 2) {
-            NumberFormat in = NumberFormat.getCurrencyInstance(new Locale("en", "in"));
-            System.out.println("Your salary is: " + (in.format(salary)));
-        } else if (currencyOption == 3) {
-            NumberFormat cn = NumberFormat.getCurrencyInstance(Locale.CHINA);
-            System.out.println("Your salary is: " + (cn.format(salary)));
-        } else if (currencyOption == 4) {
-            NumberFormat fr = NumberFormat.getCurrencyInstance(Locale.FRANCE);
-            System.out.println("Your salary is: " + (fr.format(salary)));
-        } else if (currencyOption == 5) {
-            NumberFormat jn = NumberFormat.getCurrencyInstance(Locale.JAPAN);
-            System.out.println("Your salary is: " + (jn.format(salary)));
+        switch (currencyOption) {
+            case 1: System.out.println("Your salary is: " + (us.format(salary))); break;
+            case 2: System.out.println("Your salary is: " + (in.format(salary))); break;
+            case 3: System.out.println("Your salary is: " + (cn.format(salary))); break;
+            case 4: System.out.println("Your salary is: " + (fr.format(salary))); break;
+            case 5: System.out.println("Your salary is: " + (jn.format(salary))); break;
+            default: System.out.println("Invalid Input!");
         }
 
     }

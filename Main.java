@@ -13,16 +13,11 @@ public class Main {
             "3. 3D Volume Calculator");
     int option = input.nextInt();
 
-    if (option == 1) {
-      calcMenu.Main();
-
-    } else if (option == 2) {
-      salary.calculate();
-
-    } else if (option == 3) {
-      volumeMenu.Main();
-
-    }
+    switch (option) {
+      case 1: calcMenu.Main(); break;
+      case 2: salary.calculate(); break;
+      case 3: volumeMenu.Main(); break;
+      }
 
   }
 }

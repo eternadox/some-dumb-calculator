@@ -15,23 +15,12 @@ public class volumeMenu {
         int option = input.nextInt();
 
         switch (option) {
-            case 1 :
-                volume.cube();
-                break;
-            case 2 :
-                volume.triangularPyramid();
-                break;
-            case 3 :
-                volume.squarePyramid();
-                break;
-            case 4 :
-                volume.triangularPrism();
-                break;
-            case 5 :
-                volume.rectangularPrism();
-                break;
-            default:
-                System.out.println("Invalid Input!");
+            case 1: volume.cube(); break;
+            case 2: volume.triangularPyramid(); break;
+            case 3: volume.squarePyramid(); break;
+            case 4: volume.triangularPrism(); break;
+            case 5: volume.rectangularPrism(); break;
+            default: System.out.println("Invalid Input!");
         }
 
     }
