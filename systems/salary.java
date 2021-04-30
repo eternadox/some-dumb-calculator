@@ -47,8 +47,33 @@ public class salary {
         }
 
         double salary = yearlySalary(hoursPerDay, incomePerHour, vacationDays);
-        NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
-        System.out.println("Your salary is: " + (us.format(salary)));
+
+        System.out.println("Which type of currency would you like?\n\n" +
+                "1. USD\n" +
+                "2. Rupee\n" +
+                "3. Renminbi\n" +
+                "4. Euro\n" +
+                "5. Yen\n");
+
+        int currencyOption = input.nextInt();
+        if (currencyOption == 1) {
+            NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
+            System.out.println("Your salary is: " + (us.format(salary)));
+
+        } else if (currencyOption == 2) {
+            NumberFormat in = NumberFormat.getCurrencyInstance(new Locale("en", "in"));
+            System.out.println("Your salary is: " + (in.format(salary)));
+        } else if (currencyOption == 3) {
+            NumberFormat cn = NumberFormat.getCurrencyInstance(Locale.CHINA);
+            System.out.println("Your salary is: " + (cn.format(salary)));
+        } else if (currencyOption == 4) {
+            NumberFormat fr = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+            System.out.println("Your salary is: " + (fr.format(salary)));
+        } else if (currencyOption == 5) {
+            NumberFormat jn = NumberFormat.getCurrencyInstance(Locale.JAPAN);
+            System.out.println("Your salary is: " + (jn.format(salary)));
+        }
+
     }
 
 }
