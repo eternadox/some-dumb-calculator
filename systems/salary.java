@@ -1,6 +1,8 @@
 package systems;
 
 import java.util.Scanner;
+import java.text.*;
+import java.util.Locale;
 
 public class salary {
 
@@ -44,7 +46,9 @@ public class salary {
             vacationDays = input.nextInt();
         }
 
-        System.out.println("Your salary is: " + (salary.yearlySalary(hoursPerDay, incomePerHour, vacationDays)));
+        double salary = yearlySalary(hoursPerDay, incomePerHour, vacationDays);
+        NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
+        System.out.println("Your salary is: " + (us.format(salary)));
     }
 
 }
