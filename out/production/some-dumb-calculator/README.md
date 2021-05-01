@@ -1,2 +1,2 @@
-# some-dumb-systems.calculator
-My mission is to make this into a fully functional systems.calculator with a lot of features.
+# some-dumb-systems.Calculator
+My mission is to make this into a fully functional systems.Calculator with a lot of features.
