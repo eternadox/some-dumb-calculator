@@ -22,7 +22,7 @@ public class Main {
 
     JButton volumeCalculator = new JButton("3D Volume Calculator");
     volumeCalculator.setBounds(50,100,95,30);
-    volumeCalculator.addActionListener(e -> Salary.calculate());
+    volumeCalculator.addActionListener(e -> VolumeMenu.Main());
 
     JPanel panel = new JPanel();
     panel.setBorder(BorderFactory.createEmptyBorder(100, 100, 100, 100));

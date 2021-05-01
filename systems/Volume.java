@@ -39,6 +39,11 @@ public class Volume {
 
     }
 
+    public static void cone () {
+        System.out.println(" ");
+
+    }
+
     public static void sphere () {
         System.out.println("Enter the radius: ");
         double radius = input.nextDouble();
