@@ -1,6 +1,6 @@
 import event.*;
 import java.util.Scanner;
-import systems.salary;
+import systems.Salary;
 
 public class Main {
 
@@ -14,9 +14,9 @@ public class Main {
     int option = input.nextInt();
 
     switch (option) {
-      case 1: calcMenu.Main(); break;
-      case 2: salary.calculate(); break;
-      case 3: volumeMenu.Main(); break;
+      case 1: CalcMenu.Main(); break;
+      case 2: Salary.calculate(); break;
+      case 3: VolumeMenu.Main(); break;
       }
 
   }

@@ -2,7 +2,7 @@ package systems;
 
 import java.util.Scanner;
 
-public class calculator {
+public class Calculator {
 
 // addition method
   public static void Add(double num1, double num2) {
@@ -148,7 +148,7 @@ public class calculator {
     try {
       String num1 = objNum1.nextLine();
       double num1Double = Double.parseDouble(num1);
-      calculator.Pow(num1Double);
+      Calculator.Pow(num1Double);
     } catch (NumberFormatException nfe) {
       System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a   number?");
     }

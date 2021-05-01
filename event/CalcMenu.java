@@ -1,9 +1,10 @@
 package event;
 
-import systems.calculator;
+import systems.Calculator;
+
 import java.util.Scanner;
 
-public class calcMenu {
+public class CalcMenu {
 
   public static void Main () {
 
@@ -19,11 +20,11 @@ public class calcMenu {
       Scanner objNum2 = new Scanner(System.in);
 
       switch (opInt) {
-        case 1: calculator.addOp(objNum1,objNum2); break;
-        case 2: calculator.subOp(objNum1, objNum2); break;
-        case 3: calculator.multiOp(objNum1, objNum2); break;
-        case 4: calculator.divOp(objNum1, objNum2); break;
-        case 5: calculator.powOp(objNum1); break;
+        case 1: Calculator.addOp(objNum1,objNum2); break;
+        case 2: Calculator.subOp(objNum1, objNum2); break;
+        case 3: Calculator.multiOp(objNum1, objNum2); break;
+        case 4: Calculator.divOp(objNum1, objNum2); break;
+        case 5: Calculator.powOp(objNum1); break;
         default: System.out.println("Invalid Input!");
       }
 

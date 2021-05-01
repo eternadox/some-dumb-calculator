@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.text.*;
 import java.util.Locale;
 
-public class salary {
+public class Salary {
 
     public static double yearlySalary (double hoursPerDayFunc, double incomePerHourFunc, int vacationDaysFunc)
     {

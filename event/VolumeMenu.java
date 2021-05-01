@@ -1,9 +1,9 @@
 package event;
 
 import java.util.Scanner;
-import systems.volume;
+import systems.Volume;
 
-public class volumeMenu {
+public class VolumeMenu {
     public static void Main () {
         Scanner input = new Scanner(System.in);
 
@@ -15,10 +15,10 @@ public class volumeMenu {
         int option = input.nextInt();
 
         switch (option) {
-            case 1: volume.cube(); break;
-            case 2: volume.triangularPyramid(); break;
-            case 3: volume.squarePyramid(); break;
-            case 4: volume.polygonalPrism(); break;
+            case 1: Volume.cube(); break;
+            case 2: Volume.triangularPyramid(); break;
+            case 3: Volume.squarePyramid(); break;
+            case 4: Volume.polygonalPrism(); break;
             default: System.out.println("Invalid Input!");
         }
 

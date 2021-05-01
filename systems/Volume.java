@@ -2,7 +2,7 @@ package systems;
 
 import java.util.Scanner;
 
-public class volume {
+public class Volume {
     static Scanner input = new Scanner(System.in);
 
     public static void cube () {
