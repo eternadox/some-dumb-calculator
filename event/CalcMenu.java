@@ -9,7 +9,12 @@ public class CalcMenu {
   public static void Main () {
 
     Scanner objOperator = new Scanner(System.in);  // Create a Scanner object
-    System.out.println("Which operation would you like to do?\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Power");
+    System.out.println("Which operation would you like to do?\n" +
+            "1. Addition\n" +
+            "2. Subtraction\n" +
+            "3. Multiplication\n" +
+            "4. Division\n" +
+            "5. Power");
 
     try {
       String op = objOperator.nextLine();  // Read user input
