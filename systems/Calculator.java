@@ -44,14 +44,6 @@ public class Calculator {
 
   }
 
-// power method
-  public static void Pow(double powNum) {
-
-    double powedNum = powNum * powNum;
-    System.out.println(powedNum);
-
-  }
-
   public static void addOp(Scanner objNum1, Scanner objNum2) {
     System.out.print("Enter your first number: ");
 
@@ -67,7 +59,7 @@ public class Calculator {
       Add(num1Double, num2Double);
 
     } catch (NumberFormatException nfe) {
-      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a   number?");
+      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
 
     }
   }
@@ -87,7 +79,7 @@ public class Calculator {
       Sub(num1Double, num2Double);
 
     } catch (NumberFormatException nfe) {
-      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a   number?");
+      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
 
     }
   }
@@ -107,7 +99,7 @@ public class Calculator {
       Multi(num1Double, num2Double);
 
     } catch (NumberFormatException nfe) {
-      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a   number?");
+      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
 
     }
   }
@@ -130,27 +122,43 @@ public class Calculator {
       String which = objWhich.nextLine();
       int whichInt = Integer.parseInt(which);
 
-      if (whichInt == 1) {
-        Rem(num1Double, num2Double);
-      } else {
-        Div(num1Double, num2Double);
+      switch (whichInt) {
+        case 1: Rem(num1Double, num2Double); break;
+        case 2: Div(num1Double, num2Double); break;
       }
 
     } catch (NumberFormatException nfe) {
-      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a   number?");
+      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
 
     }
   }
 
-  public static void powOp(Scanner objNum1) {
-    System.out.print("Enter your number: ");
+  public static void powOp(Scanner objNum1, Scanner objNum2) {
+    System.out.print("Enter your first number: ");
+
+    try {
+      String num1 = objNum1.nextLine();
+      System.out.print("Enter your second number: ");
+      String num2 = objNum2.nextLine();
+      double num1Double = Double.parseDouble(num1);
+      double num2Double = Double.parseDouble(num2);
+      System.out.println(Math.pow(num1Double, num2Double));
+
+    } catch (NumberFormatException nfe) {
+      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
+    }
+  }
+
+  public static void sqrtOp(Scanner objNum1) {
+    System.out.println("Enter your number: ");
 
     try {
       String num1 = objNum1.nextLine();
       double num1Double = Double.parseDouble(num1);
-      Pow(num1Double);
+      System.out.println(Math.sqrt(num1Double));
+
     } catch (NumberFormatException nfe) {
-      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a   number?");
+      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
     }
   }
 

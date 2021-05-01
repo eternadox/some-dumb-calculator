@@ -13,7 +13,8 @@ public class CalcMenu {
             "2. Subtraction\n" +
             "3. Multiplication\n" +
             "4. Division\n" +
-            "5. Power");
+            "5. Power\n" +
+            "6. Square Root");
 
     try {
       String op = objOperator.nextLine();  // Read user input
@@ -28,7 +29,8 @@ public class CalcMenu {
         case 2: Calculator.subOp(objNum1, objNum2); break;
         case 3: Calculator.multiOp(objNum1, objNum2); break;
         case 4: Calculator.divOp(objNum1, objNum2); break;
-        case 5: Calculator.powOp(objNum1); break;
+        case 5: Calculator.powOp(objNum1, objNum2); break;
+        case 6: Calculator.sqrtOp(objNum1); break;
         default: System.out.println("Invalid Input!");
       }
 
