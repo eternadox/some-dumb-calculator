@@ -13,7 +13,8 @@ public class VolumeMenu {
                 "3. Cone\n" +
                 "4. Polygonal Prism\n" +
                 "5. Cylinder\n" +
-                "6. Sphere");
+                "6. Sphere\n" +
+                "7. Torus");
         int option = input.nextInt();
 
         switch (option) {
@@ -23,6 +24,7 @@ public class VolumeMenu {
             case 4: Volume.polygonalPrism(); break;
             case 5: Volume.cylinder(); break;
             case 6: Volume.sphere(); break;
+            case 7: Volume.torus(); break;
             default: System.out.println("Invalid Input!");
         }
 

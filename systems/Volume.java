@@ -62,10 +62,21 @@ public class Volume {
         System.out.println("Enter the radius: "); double radius = input.nextDouble();
 
         System.out.println("Would you like the answer in terms of PI? (y/n)"); String pi = input.next();
-
         switch (pi) {
             case "y": System.out.println("Your answer is: " + ((Math.pow(radius, 3) * 4) / 3) + "pi"); break;
             case "n": System.out.println("Your answer is: " + (Math.pow(radius, 3) * 4 * Math.PI) / 3); break;
+        }
+
+    }
+
+    public static void torus () {
+        System.out.println("Enter your major radius: "); double majorRadius = input.nextDouble();
+        System.out.println("Enter your minor radius: "); double minorRadius = input.nextDouble();
+
+        System.out.println("Would you like the answer in terms of PI? (y/n)"); String pi = input.next();
+        switch (pi) {
+            case "y": System.out.println("Your answer is: " + ((Math.pow(minorRadius, 2)) * (2 * majorRadius)) + "pi");
+            case "n": System.out.println("Your answer is: " + (Math.PI * Math.pow(minorRadius, 2)) * (Math.PI * 2 * majorRadius));
         }
 
     }
