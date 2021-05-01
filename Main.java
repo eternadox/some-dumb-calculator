@@ -1,7 +1,7 @@
 import event.*;
 import java.awt.*;
 import java.util.Scanner;
-import systems.Salary;
+import systems.*;
 import javax.swing.*;
 
 public class Main {

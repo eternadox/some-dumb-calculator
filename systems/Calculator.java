@@ -148,7 +148,7 @@ public class Calculator {
     try {
       String num1 = objNum1.nextLine();
       double num1Double = Double.parseDouble(num1);
-      Calculator.Pow(num1Double);
+      Pow(num1Double);
     } catch (NumberFormatException nfe) {
       System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a   number?");
     }

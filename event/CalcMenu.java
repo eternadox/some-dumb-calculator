@@ -1,6 +1,6 @@
 package event;
 
-import systems.Calculator;
+import systems.*;
 import java.util.Scanner;
 
 public class CalcMenu {

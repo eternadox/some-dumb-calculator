@@ -10,17 +10,19 @@ public class VolumeMenu {
         System.out.println("What would you like to calculate the volume of?\n\n" +
                 "1. Cube\n" +
                 "2. Polygonal Pyramid\n" +
-                "3. Polygonal Prism\n" +
-                "4. Cone\n" +
-                "5. Sphere");
+                "3. Cone\n" +
+                "4. Polygonal Prism\n" +
+                "5. Cylinder\n" +
+                "6. Sphere");
         int option = input.nextInt();
 
         switch (option) {
             case 1: Volume.cube(); break;
             case 2: Volume.polygonalPyramid(); break;
-            case 3: Volume.polygonalPrism(); break;
-            case 4: Volume.cone(); break;
-            case 5: Volume.sphere(); break;
+            case 3: Volume.cone(); break;
+            case 4: Volume.polygonalPrism(); break;
+            case 5: Volume.cylinder(); break;
+            case 6: Volume.sphere(); break;
             default: System.out.println("Invalid Input!");
         }
 
