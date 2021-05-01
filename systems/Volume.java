@@ -75,8 +75,21 @@ public class Volume {
 
         System.out.println("Would you like the answer in terms of PI? (y/n)"); String pi = input.next();
         switch (pi) {
-            case "y": System.out.println("Your answer is: " + ((Math.pow(minorRadius, 2)) * (2 * majorRadius)) + "pi");
-            case "n": System.out.println("Your answer is: " + (Math.PI * Math.pow(minorRadius, 2)) * (Math.PI * 2 * majorRadius));
+            case "y": System.out.println("Your answer is: " + ((Math.pow(minorRadius, 2)) * (2 * majorRadius)) + "pi"); break;
+            case "n": System.out.println("Your answer is: " + (Math.PI * Math.pow(minorRadius, 2)) * (Math.PI * 2 * majorRadius)); break;
+        }
+
+    }
+
+    public static void ellipsoid () {
+        System.out.println("Enter your A axis: "); double axisA = input.nextDouble();
+        System.out.println("Enter your B axis: "); double axisB = input.nextDouble();
+        System.out.println("Enter your C axis: "); double axisC = input.nextDouble();
+
+        System.out.println("Would you like the answer in terms of Pi? (y/n)"); String pi = input.next();
+        switch (pi) {
+            case "y": System.out.println("Your answer is: " + ((4.0 / 3.0) * (axisA * axisB * axisC)) + "pi"); break;
+            case "n": System.out.println("Your answer is: " + (4.0 / 3.0) * (Math.PI * axisA * axisB * axisC)); break;
         }
 
     }
