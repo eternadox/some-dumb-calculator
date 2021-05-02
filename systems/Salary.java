@@ -1,7 +1,6 @@
 package systems;
 
 import event.Exceptions;
-
 import java.util.Scanner;
 import java.text.*;
 import java.util.Locale;
@@ -70,6 +69,7 @@ public class Salary {
 
         } catch (NumberFormatException nfe) {
             Exceptions.numFormatException(nfe);
+            Salary.calculate();
         }
     }
 }

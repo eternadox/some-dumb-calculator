@@ -15,6 +15,7 @@ public class Calculator {
 
     } catch (NumberFormatException nfe) {
       Exceptions.numFormatException(nfe);
+      Calculator.addOp(inputNum1, inputNum2);
     }
   }
 
@@ -28,6 +29,7 @@ public class Calculator {
 
     } catch (NumberFormatException nfe) {
       Exceptions.numFormatException(nfe);
+      Calculator.subOp(inputNum1, inputNum2);
     }
   }
 
@@ -41,6 +43,7 @@ public class Calculator {
 
     } catch (NumberFormatException nfe) {
       Exceptions.numFormatException(nfe);
+      Calculator.multiOp(inputNum1, inputNum2);
     }
   }
 
@@ -50,19 +53,19 @@ public class Calculator {
       System.out.print("Enter your first number: "); double num1 = inputNum1.nextDouble();
       System.out.print("\nEnter your second number: "); double num2 = inputNum2.nextDouble();
 
-      System.out.println("Would you like to find the remainder? (1 = Yes/0 = No)");
+      System.out.println("Would you like to find the remainder? (y/n)");
 
       Scanner inputWhich = new Scanner(System.in);
       String which = inputWhich.nextLine();
-      int whichInt = Integer.parseInt(which);
 
-      switch (whichInt) {
-        case 1: System.out.println("Your answer is: " + num1 % num2); break;
-        case 2: System.out.println("Your answer is: " + num1 / num2); break;
+      switch (which) {
+        case "y": System.out.println("Your answer is: " + num1 % num2); break;
+        case "n": System.out.println("Your answer is: " + num1 / num2); break;
       }
 
     } catch (NumberFormatException nfe) {
       Exceptions.numFormatException(nfe);
+      Calculator.divOp(inputNum1, inputNum2);
     }
   }
 
@@ -76,6 +79,7 @@ public class Calculator {
 
     } catch (NumberFormatException nfe) {
       Exceptions.numFormatException(nfe);
+      Calculator.powOp(inputNum1, inputNum2);
     }
   }
 
@@ -87,6 +91,7 @@ public class Calculator {
 
     } catch (NumberFormatException nfe) {
       Exceptions.numFormatException(nfe);
+      Calculator.sqrtOp(inputNum1);
     }
   }
 }

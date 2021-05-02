@@ -13,6 +13,8 @@ public class Volume {
 
         } catch (NumberFormatException nfe) {
             Exceptions.numFormatException(nfe);
+            Volume.cube();
+
         }
     }
 
@@ -27,6 +29,7 @@ public class Volume {
 
         } catch (NumberFormatException nfe) {
             Exceptions.numFormatException(nfe);
+            Volume.polygonalPyramid();
         }
     }
 
@@ -44,6 +47,7 @@ public class Volume {
             }
         } catch (NumberFormatException nfe) {
             Exceptions.numFormatException(nfe);
+            Volume.cone();
         }
     }
 
@@ -58,6 +62,7 @@ public class Volume {
 
         } catch (NumberFormatException nfe) {
             Exceptions.numFormatException(nfe);
+            Volume.polygonalPrism();
         }
     }
 
@@ -75,6 +80,7 @@ public class Volume {
 
         } catch (NumberFormatException nfe) {
             Exceptions.numFormatException(nfe);
+            Volume.cylinder();
         }
     }
 
@@ -90,6 +96,7 @@ public class Volume {
 
         } catch (NumberFormatException nfe) {
             Exceptions.numFormatException(nfe);
+            Volume.sphere();
         }
     }
 
@@ -106,6 +113,7 @@ public class Volume {
 
         } catch (NumberFormatException nfe) {
             Exceptions.numFormatException(nfe);
+            Volume.torus();
         }
     }
 
@@ -123,6 +131,7 @@ public class Volume {
 
         } catch (NumberFormatException nfe) {
             Exceptions.numFormatException(nfe);
+            Volume.ellipsoid();
         }
     }
 }

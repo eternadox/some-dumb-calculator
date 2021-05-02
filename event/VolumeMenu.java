@@ -34,6 +34,7 @@ public class VolumeMenu {
 
         } catch (NumberFormatException nfe) {
          Exceptions.numFormatException(nfe);
+         VolumeMenu.Main();
         }
     }
 }
