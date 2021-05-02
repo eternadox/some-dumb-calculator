@@ -8,7 +8,7 @@ public class Calculator {
   public static void Add(double num1, double num2) {
 
     double addedNum = num1 + num2;
-    System.out.println(addedNum);
+    System.out.println("Your answer is: " + addedNum);
 
   }
 
@@ -16,7 +16,7 @@ public class Calculator {
   public static void Sub(double num1, double num2) {
 
     double subtractedNum = num1 - num2;
-    System.out.println(subtractedNum);
+    System.out.println("Your answer is: " + subtractedNum);
 
   }
 
@@ -24,7 +24,7 @@ public class Calculator {
   public static void Multi(double num1, double num2) {
 
     double multipliedNum = num1 * num2;
-    System.out.println(multipliedNum);
+    System.out.println("Your answer is: " + multipliedNum);
 
   }
   
@@ -32,7 +32,7 @@ public class Calculator {
   public static void Div(double num1, double num2) {
 
     double dividedNum = num1 / num2;
-    System.out.println(dividedNum);
+    System.out.println("Your answer is: " + dividedNum);
 
   }
 
@@ -40,23 +40,17 @@ public class Calculator {
   public static void Rem(double num1, double num2) {
 
     double remainderedNum = num1 % num2;
-    System.out.println(remainderedNum);
+    System.out.println("Your answer is: " + remainderedNum);
 
   }
 
-  public static void addOp(Scanner objNum1, Scanner objNum2) {
-    System.out.print("Enter your first number: ");
+  public static void addOp(Scanner inputNum1, Scanner inputNum2) {
 
     try {
-      String num1 = objNum1.nextLine();
-      double num1Double = Double.parseDouble(num1);
+      System.out.print("Enter your first number: "); double num1 = inputNum1.nextDouble();
+      System.out.print("\nEnter your second number: "); double num2 = inputNum2.nextDouble();
 
-      System.out.print("\nEnter your second number: ");
-
-      String num2 = objNum2.nextLine();
-      double num2Double = Double.parseDouble(num2);
-
-      Add(num1Double, num2Double);
+      Add(num1, num2);
 
     } catch (NumberFormatException nfe) {
       System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
@@ -64,19 +58,13 @@ public class Calculator {
     }
   }
 
-  public static void subOp(Scanner objNum1, Scanner objNum2) {
-    System.out.print("Enter your first number: ");
+  public static void subOp(Scanner inputNum1, Scanner inputNum2) {
 
     try {
-      String num1 = objNum1.nextLine();
-      double num1Double = Double.parseDouble(num1);
+      System.out.print("Enter your first number: "); double num1 = inputNum1.nextDouble();
+      System.out.print("\nEnter your second number: "); double num2 = inputNum2.nextDouble();
 
-      System.out.print("\nEnter your second number: ");
-
-      String num2 = objNum2.nextLine();
-      double num2Double = Double.parseDouble(num2);
-
-      Sub(num1Double, num2Double);
+      Sub(num1, num2);
 
     } catch (NumberFormatException nfe) {
       System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
@@ -84,19 +72,14 @@ public class Calculator {
     }
   }
 
-  public static void multiOp(Scanner objNum1, Scanner objNum2) {
-    System.out.print("Enter your first number: ");
+  public static void multiOp(Scanner inputNum1, Scanner inputNum2) {
+
 
     try {
-      String num1 = objNum1.nextLine();
-      double num1Double = Double.parseDouble(num1);
+      System.out.print("Enter your first number: "); double num1 = inputNum1.nextDouble();
+      System.out.print("\nEnter your second number: "); double num2 = inputNum2.nextDouble();
 
-      System.out.print("\nEnter your second number: ");
-
-      String num2 = objNum2.nextLine();
-      double num2Double = Double.parseDouble(num2);
-
-      Multi(num1Double, num2Double);
+      Multi(num1, num2);
 
     } catch (NumberFormatException nfe) {
       System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
@@ -104,27 +87,21 @@ public class Calculator {
     }
   }
 
-  public static void divOp(Scanner objNum1, Scanner objNum2) {
-    System.out.print("Enter your first number: ");
+  public static void divOp(Scanner inputNum1, Scanner inputNum2) {
 
     try {
-      String num1 = objNum1.nextLine();
-      double num1Double = Double.parseDouble(num1);
-
-      System.out.print("\nEnter your second number: ");
-
-      String num2 = objNum2.nextLine();
-      double num2Double = Double.parseDouble(num2);
+      System.out.print("Enter your first number: "); double num1 = inputNum1.nextDouble();
+      System.out.print("\nEnter your second number: "); double num2 = inputNum2.nextDouble();
 
       System.out.println("Would you like to find the remainder? (1 = Yes/0 = No)");
 
-      Scanner objWhich = new Scanner(System.in);
-      String which = objWhich.nextLine();
+      Scanner inputWhich = new Scanner(System.in);
+      String which = inputWhich.nextLine();
       int whichInt = Integer.parseInt(which);
 
       switch (whichInt) {
-        case 1: Rem(num1Double, num2Double); break;
-        case 2: Div(num1Double, num2Double); break;
+        case 1: Rem(num1, num2); break;
+        case 2: Div(num1, num2); break;
       }
 
     } catch (NumberFormatException nfe) {
@@ -133,29 +110,24 @@ public class Calculator {
     }
   }
 
-  public static void powOp(Scanner objNum1, Scanner objNum2) {
-    System.out.print("Enter your first number: ");
+  public static void powOp(Scanner inputNum1, Scanner inputNum2) {
 
     try {
-      String num1 = objNum1.nextLine();
-      System.out.print("Enter your second number: ");
-      String num2 = objNum2.nextLine();
-      double num1Double = Double.parseDouble(num1);
-      double num2Double = Double.parseDouble(num2);
-      System.out.println(Math.pow(num1Double, num2Double));
+      System.out.print("Enter your first number: "); double num1 = inputNum1.nextDouble();
+      System.out.print("Enter your second number: "); double num2 = inputNum2.nextDouble();
+
+      System.out.println("Your answer is: " + Math.pow(num1, num2));
 
     } catch (NumberFormatException nfe) {
       System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
     }
   }
 
-  public static void sqrtOp(Scanner objNum1) {
-    System.out.println("Enter your number: ");
+  public static void sqrtOp(Scanner inputNum1) {
 
     try {
-      String num1 = objNum1.nextLine();
-      double num1Double = Double.parseDouble(num1);
-      System.out.println(Math.sqrt(num1Double));
+      System.out.println("Enter your number: "); double num1 = inputNum1.nextDouble();
+      System.out.println("Your answer is: " + Math.sqrt(num1));
 
     } catch (NumberFormatException nfe) {
       System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
