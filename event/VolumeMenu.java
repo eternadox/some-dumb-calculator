@@ -29,7 +29,5 @@ public class VolumeMenu {
             case 8: Volume.ellipsoid(); break;
             default: System.out.println("Invalid Input!");
         }
-
     }
-
 }

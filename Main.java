@@ -21,7 +21,6 @@ public class Main {
       case 2: Salary.calculate(); break;
       case 3: VolumeMenu.Main(); break;
       }
-
   }
 
   public static void GUI() {
@@ -55,5 +54,4 @@ public class Main {
     frame.pack();
     frame.setVisible(true);
   }
-
 }

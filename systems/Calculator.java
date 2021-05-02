@@ -1,50 +1,9 @@
 package systems;
 
 import event.Exceptions;
-
 import java.util.Scanner;
 
 public class Calculator {
-
-// addition method
-  public static void Add(double num1, double num2) {
-
-    double addedNum = num1 + num2;
-    System.out.println("Your answer is: " + addedNum);
-
-  }
-
-// subtraction method
-  public static void Sub(double num1, double num2) {
-
-    double subtractedNum = num1 - num2;
-    System.out.println("Your answer is: " + subtractedNum);
-
-  }
-
-// multiplication method
-  public static void Multi(double num1, double num2) {
-
-    double multipliedNum = num1 * num2;
-    System.out.println("Your answer is: " + multipliedNum);
-
-  }
-  
-// division method
-  public static void Div(double num1, double num2) {
-
-    double dividedNum = num1 / num2;
-    System.out.println("Your answer is: " + dividedNum);
-
-  }
-
-// remainder method
-  public static void Rem(double num1, double num2) {
-
-    double remainderedNum = num1 % num2;
-    System.out.println("Your answer is: " + remainderedNum);
-
-  }
 
   public static void addOp(Scanner inputNum1, Scanner inputNum2) {
 
@@ -52,7 +11,7 @@ public class Calculator {
       System.out.print("Enter your first number: "); double num1 = inputNum1.nextDouble();
       System.out.print("\nEnter your second number: "); double num2 = inputNum2.nextDouble();
 
-      Add(num1, num2);
+      System.out.println("Your answer is: " + (num1 + num2));
 
     } catch (NumberFormatException nfe) {
       Exceptions.numFormatException(nfe);
@@ -65,7 +24,7 @@ public class Calculator {
       System.out.print("Enter your first number: "); double num1 = inputNum1.nextDouble();
       System.out.print("\nEnter your second number: "); double num2 = inputNum2.nextDouble();
 
-      Sub(num1, num2);
+      System.out.println("Your answer is: " + (num1 - num2));
 
     } catch (NumberFormatException nfe) {
       Exceptions.numFormatException(nfe);
@@ -78,7 +37,7 @@ public class Calculator {
       System.out.print("Enter your first number: "); double num1 = inputNum1.nextDouble();
       System.out.print("\nEnter your second number: "); double num2 = inputNum2.nextDouble();
 
-      Multi(num1, num2);
+      System.out.println("Your answer is: " + num1 * num2);
 
     } catch (NumberFormatException nfe) {
       Exceptions.numFormatException(nfe);
@@ -98,8 +57,8 @@ public class Calculator {
       int whichInt = Integer.parseInt(which);
 
       switch (whichInt) {
-        case 1: Rem(num1, num2); break;
-        case 2: Div(num1, num2); break;
+        case 1: System.out.println("Your answer is: " + num1 % num2); break;
+        case 2: System.out.println("Your answer is: " + num1 / num2); break;
       }
 
     } catch (NumberFormatException nfe) {
@@ -130,6 +89,4 @@ public class Calculator {
       Exceptions.numFormatException(nfe);
     }
   }
-
 }
-  

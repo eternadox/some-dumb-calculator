@@ -37,8 +37,5 @@ public class CalcMenu {
     } catch (NumberFormatException nfe) {
       Exceptions.numFormatException(nfe);
     }
-
   }
-
-
 }
