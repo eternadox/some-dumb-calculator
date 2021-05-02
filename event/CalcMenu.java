@@ -36,7 +36,6 @@ public class CalcMenu {
 
     } catch (NumberFormatException nfe) {
       System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
-
     }
 
   }
