@@ -1,5 +1,7 @@
 package systems;
 
+import event.Exceptions;
+
 import java.util.Scanner;
 
 public class Calculator {
@@ -53,7 +55,7 @@ public class Calculator {
       Add(num1, num2);
 
     } catch (NumberFormatException nfe) {
-      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
+      Exceptions.numFormatException(nfe);
     }
   }
 
@@ -66,12 +68,11 @@ public class Calculator {
       Sub(num1, num2);
 
     } catch (NumberFormatException nfe) {
-      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
+      Exceptions.numFormatException(nfe);
     }
   }
 
   public static void multiOp(Scanner inputNum1, Scanner inputNum2) {
-
 
     try {
       System.out.print("Enter your first number: "); double num1 = inputNum1.nextDouble();
@@ -80,7 +81,7 @@ public class Calculator {
       Multi(num1, num2);
 
     } catch (NumberFormatException nfe) {
-      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
+      Exceptions.numFormatException(nfe);
     }
   }
 
@@ -102,7 +103,7 @@ public class Calculator {
       }
 
     } catch (NumberFormatException nfe) {
-      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
+      Exceptions.numFormatException(nfe);
     }
   }
 
@@ -115,7 +116,7 @@ public class Calculator {
       System.out.println("Your answer is: " + Math.pow(num1, num2));
 
     } catch (NumberFormatException nfe) {
-      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
+      Exceptions.numFormatException(nfe);
     }
   }
 
@@ -126,7 +127,7 @@ public class Calculator {
       System.out.println("Your answer is: " + Math.sqrt(num1));
 
     } catch (NumberFormatException nfe) {
-      System.out.println("NumberFormatException: " + nfe.getMessage() + "\nAre you sure you are using a number?");
+      Exceptions.numFormatException(nfe);
     }
   }
 
