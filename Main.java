@@ -14,13 +14,19 @@ public class Main {
             "1. Simple Calculator\n" +
             "2. Salary Calculator\n" +
             "3. 3D Volume Calculator");
-    int option = input.nextInt();
 
-    switch (option) {
-      case 1: CalcMenu.Main(); break;
-      case 2: Salary.calculate(); break;
-      case 3: VolumeMenu.Main(); break;
+    try {
+      int option = input.nextInt();
+
+      switch (option) {
+        case 1: CalcMenu.Main(); break;
+        case 2: Salary.calculate(); break;
+        case 3: VolumeMenu.Main(); break;
       }
+
+    } catch (NumberFormatException nfe) {
+      Exceptions.numFormatException(nfe);
+    }
   }
 
   public static void GUI() {
