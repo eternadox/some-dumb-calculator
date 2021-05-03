@@ -8,25 +8,29 @@ public class Main {
 
   public static void main(String[] args) {
     GUI();
-
-    Scanner input = new Scanner(System.in);
-    System.out.println("Which program would you like to run?\n\n" +
-            "1. Simple Calculator\n" +
+    
+    int loop = 0;
+    while (loop = 0) {
+      Scanner input = new Scanner(System.in);
+      System.out.println("Which program would you like to run?\n\n" +
+            "1. Basic Calculator\n" +
             "2. Salary Calculator\n" +
             "3. 3D Volume Calculator");
 
-    try {
-      int option = input.nextInt();
+      try {
+        int option = input.nextInt();
 
-      switch (option) {
-        case 1: CalcMenu.Main(); break;
-        case 2: Salary.calculate(); break;
-        case 3: VolumeMenu.Main(); break;
+        switch (option) {
+          case 1: CalcMenu.Main(); loop = 1; break;
+          case 2: Salary.calculate();loop = 1; break;
+          case 3: VolumeMenu.Main(); loop = 1; break;
+        }
+
+      } catch (NumberFormatException nfe) {
+        Exceptions.numFormatException(nfe);
       }
-
-    } catch (NumberFormatException nfe) {
-      Exceptions.numFormatException(nfe);
     }
+
   }
 
   public static void GUI() {
